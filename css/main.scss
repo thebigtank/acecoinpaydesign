@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800;900&display=swap');
+@import 'variables.scss';
+@import 'mixins.scss';
+
+
+html {
+    font-size: 16px;
+}
+
+.wrapper {
+    padding-top: 6em;
+    font-family: $raleway;
+}
+
+.form {
+    padding-right: 5em;
+    &-header {
+        @include setFlex(flex, center, space-between, initial);
+        margin-bottom: 6em;
+        .logo {
+            @include setFlex(flex, center, space-between, initial);
+            &-circle {
+                height: 3em;
+                width: 3em;
+                display: block;
+                background-color: $blue_bg;
+                border-radius: 50%;
+            }
+            h1 {
+                font-weight: 800;
+                font-size: 1.75em;
+                margin-left: .6em;
+                color: $text_one;
+                .lean {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .timer {
+            font-family: $opensans;
+            font-weight: 600;
+            font-size: 1.35em;
+            &-box {
+                background-color: $dark_bg;
+                color: #fff;
+                padding: .3em .4em;
+                border-radius: 4px;
+                margin-left: -3px;
+            }
+            &-divider {
+                position: relative;
+                right: 2px;
+            }
+        }
+    }
+    &-body {
+        form {
+            .input-group {
+                margin-bottom: 2em;
+                .header {
+                    @include setFlex(flex, center, space-between, initial);
+                    .description {
+                        .title {
+                            text-transform: capitalize;
+                            font-weight: 800;
+                            font-size: 1.15em;
+                            color: $text_one;
+                            margin-bottom: .2em;
+                        }
+                        .desc {
+                            font-family: $opensans;
+                            font-size: .9em;
+                            font-weight: 600;
+                            color: $text_two;
+
+                        }
+                    }
+                    button.edit {
+                        @include setFlex(flex, center, space-between, initial);
+                        color: $active-border;
+                        svg {
+                            height: 1em;
+                            fill: $active-border;
+                        }
+                        .btn-desc {
+                            display: block;
+                            margin-left: .6em;
+                            font-weight: 700;
+                        }
+                    }
+                }
+                .main {
+                    position: relative;
+                    margin-top: 1em;
+                    img {
+                        position: absolute;
+                        &.leading-icon {
+                            left: 0;
+                            height: 2em;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                            left: 1.2em;
+                        }
+                        &.trailing-icon {
+                            right: 0;
+                            height: 1.5em;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                            right: 1.5em;
+                        }
+                    }
+                    input {
+                        border: 2px solid $input-border;
+                        font-family: $opensans;
+                        width: 100%;
+                        padding: 1em 4em 1em 4em;
+                        font-size: 1.2em;
+                        border-radius: 6px;
+                        background: linear-gradient(45deg, #F5F5F5, transparent);
+                        font-weight: 700;
+                        color: $text_one;
+                        &:focus {
+                            outline-color: $active-border;
+                        }
+                    }
+                }
+
+                &.__col {
+                    @include setFlex(flex, center, space-between, initial);
+                    .grp {
+                        @include setFlex(flex, center, flex-end, initial);
+                        .divider {
+                            display: block;
+                            margin: 0 .65em;
+                            font-size: 1.5em;
+                            font-weight: 700;
+                            color: $text_one;
+                        }
+                    }
+                    .main {
+                        margin-top: 0;
+                        width: 50%;
+                        input {
+                            padding-right: 0;
+                            padding-left: 0;
+                            text-align: center;
+                            background: none;
+                            &:focus {
+                                background: rgb(0 119 182 / 5%);
+                            }
+                        }
+                        input[type="password"] {
+                            text-align: left;
+                            padding-left: 1.5em;
+                            letter-spacing: .3em;
+                        }
+                        .trailing-icon {
+                            opacity: .35;
+                        }
+                        &.__date {
+                            width: 32%;
+                        }
+                    }
+                }
+            }
+            .btn-submit {
+                background-color: $blue_bg;
+                width: 100%;
+                padding: 1em 0;
+                box-sizing: border-box;
+                color: #fff;
+                text-transform: capitalize;
+                font-size: 1.3em;
+                font-weight: 700;
+                border-radius: 8px;
+                transition: all 250ms ease-in-out;
+                &:hover {
+                    background-color: rgb(33 150 243 / 80%);
+                }
+                &:active {
+                    // background-color: rgb(33 150 243 / 20%);
+                }
+            }
+        }
+    }
+}
+
+.form-summary {
+    height: 20em;
+    background-color: yellow;
+}

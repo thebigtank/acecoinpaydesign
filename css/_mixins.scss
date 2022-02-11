@@ -1,0 +1,12 @@
+// @mixin setFont ($family, $weight, $size) {
+//     font-family: $family;
+//     font-weight: $weight;
+//     font-size: $size;
+// }
+
+@mixin setFlex ($flex, $alignItems, $justifyContent, $flexdirection) {
+    display: $flex;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    flex-direction: $flexdirection;
+}

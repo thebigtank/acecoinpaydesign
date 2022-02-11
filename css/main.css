@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800;900&display=swap");
+html {
+  font-size: 16px;
+}
+
+.wrapper {
+  padding-top: 6em;
+  font-family: "Raleway", sans-serif;
+}
+
+.form {
+  padding-right: 5em;
+}
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  margin-bottom: 6em;
+}
+.form-header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.form-header .logo-circle {
+  height: 3em;
+  width: 3em;
+  display: block;
+  background-color: #2196F3;
+  border-radius: 50%;
+}
+.form-header .logo h1 {
+  font-weight: 800;
+  font-size: 1.75em;
+  margin-left: 0.6em;
+  color: #05365c;
+}
+.form-header .logo h1 .lean {
+  font-weight: 500;
+}
+.form-header .timer {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.35em;
+}
+.form-header .timer-box {
+  background-color: #05365c;
+  color: #fff;
+  padding: 0.3em 0.4em;
+  border-radius: 4px;
+  margin-left: -3px;
+}
+.form-header .timer-divider {
+  position: relative;
+  right: 2px;
+}
+.form-body form .input-group {
+  margin-bottom: 2em;
+}
+.form-body form .input-group .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.form-body form .input-group .header .description .title {
+  text-transform: capitalize;
+  font-weight: 800;
+  font-size: 1.15em;
+  color: #05365c;
+  margin-bottom: 0.2em;
+}
+.form-body form .input-group .header .description .desc {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #817f82;
+}
+.form-body form .input-group .header button.edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  color: #0077B6;
+}
+.form-body form .input-group .header button.edit svg {
+  height: 1em;
+  fill: #0077B6;
+}
+.form-body form .input-group .header button.edit .btn-desc {
+  display: block;
+  margin-left: 0.6em;
+  font-weight: 700;
+}
+.form-body form .input-group .main {
+  position: relative;
+  margin-top: 1em;
+}
+.form-body form .input-group .main img {
+  position: absolute;
+}
+.form-body form .input-group .main img.leading-icon {
+  left: 0;
+  height: 2em;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 1.2em;
+}
+.form-body form .input-group .main img.trailing-icon {
+  right: 0;
+  height: 1.5em;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 1.5em;
+}
+.form-body form .input-group .main input {
+  border: 2px solid rgba(224, 224, 224, 0.5);
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  padding: 1em 4em 1em 4em;
+  font-size: 1.2em;
+  border-radius: 6px;
+  background: linear-gradient(45deg, #F5F5F5, transparent);
+  font-weight: 700;
+  color: #05365c;
+}
+.form-body form .input-group .main input:focus {
+  outline-color: #0077B6;
+}
+.form-body form .input-group.__col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.form-body form .input-group.__col .grp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: initial;
+}
+.form-body form .input-group.__col .grp .divider {
+  display: block;
+  margin: 0 0.65em;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #05365c;
+}
+.form-body form .input-group.__col .main {
+  margin-top: 0;
+  width: 50%;
+}
+.form-body form .input-group.__col .main input {
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+  background: none;
+}
+.form-body form .input-group.__col .main input:focus {
+  background: rgba(0, 119, 182, 0.05);
+}
+.form-body form .input-group.__col .main input[type=password] {
+  text-align: left;
+  padding-left: 1.5em;
+  letter-spacing: 0.3em;
+}
+.form-body form .input-group.__col .main .trailing-icon {
+  opacity: 0.35;
+}
+.form-body form .input-group.__col .main.__date {
+  width: 32%;
+}
+.form-body form .btn-submit {
+  background-color: #2196F3;
+  width: 100%;
+  padding: 1em 0;
+  box-sizing: border-box;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.3em;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 250ms ease-in-out;
+}
+.form-body form .btn-submit:hover {
+  background-color: rgba(33, 150, 243, 0.8);
+}
+.form-summary {
+  height: 20em;
+  background-color: yellow;
+}
+
+/*# sourceMappingURL=main.css.map */
