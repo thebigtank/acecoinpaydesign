@@ -176,6 +176,7 @@ html {
   background-color: #2196F3;
   width: 100%;
   padding: 1em 0;
+  margin-top: 0.75em;
   box-sizing: border-box;
   color: #fff;
   text-transform: capitalize;
@@ -187,9 +188,108 @@ html {
 .form-body form .btn-submit:hover {
   background-color: rgba(33, 150, 243, 0.8);
 }
-.form-summary {
-  height: 20em;
-  background-color: yellow;
+.checkout {
+  position: relative;
+  height: 100%;
+}
+.checkout .credit-card {
+  width: 17.5em;
+  height: 24em;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto;
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 0px 4px 14px 6px rgba(224, 224, 224, 0.4);
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.checkout .credit-card__head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  margin-bottom: 8em;
+}
+.checkout .credit-card__head img {
+  height: 1.8em;
+}
+.checkout .credit-card__head .chip {
+  height: 3.5em;
+}
+.checkout .credit-card__body {
+  position: relative;
+  color: #05365c;
+}
+.checkout .credit-card__body span {
+  display: block;
+}
+.checkout .credit-card__body .holder {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+.checkout .credit-card__body .card-digits {
+  display: flex;
+  margin-bottom: 0.5em;
+}
+.checkout .credit-card__body .card-digits .hidden-digits {
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  flex-direction: initial;
+  margin-right: 0.5em;
+}
+.checkout .credit-card__body .card-digits .hidden-digits .circle {
+  height: 0.5em;
+  width: 0.5em;
+  border-radius: 50%;
+  background-color: #05365c;
+  margin-right: 0.4em;
+}
+.checkout .credit-card__body .card-digits .visible-digits {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.15em;
+}
+.checkout .credit-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  position: relative;
+  top: 2em;
+}
+.checkout .credit-card__footer .expiry {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+}
+.checkout .credit-card__footer .logo {
+  height: 2.5em;
+}
+.checkout .blu {
+  content: "";
+  display: block;
+  height: 2em;
+  width: 4em;
+  background-color: #2196F3;
+  position: absolute;
+  top: -10px;
+  z-index: -99;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.checkout .checkout-details {
+  background-color: #f6f6f6;
+  height: 80%;
+  width: 100%;
+  border-radius: 1em;
+  position: absolute;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

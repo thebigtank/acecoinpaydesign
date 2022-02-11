@@ -168,6 +168,7 @@ html {
                 background-color: $blue_bg;
                 width: 100%;
                 padding: 1em 0;
+                margin-top: .75em;
                 box-sizing: border-box;
                 color: #fff;
                 text-transform: capitalize;
@@ -186,7 +187,110 @@ html {
     }
 }
 
-.form-summary {
-    height: 20em;
-    background-color: yellow;
+.checkout {
+    // background-color: yellow;
+    position: relative;
+    height: 100%;
+    .credit-card {
+        width: 17.5em;
+        height: 24em;
+        background-color: rgb(255 255 255 / 90%);
+        margin: 0 auto;
+        padding: 2em;
+        border-radius: 1em;
+        box-shadow: 0px 4px 14px 6px rgba(224, 224, 224, 0.4);
+        position: absolute;
+        z-index: 99;
+        left: 50%;
+        transform: translate(-50%, 0);
+        &__head {
+            position: relative;
+            @include setFlex(flex, center, space-between, initial);
+            margin-bottom: 8em;
+            img {
+                height: 1.8em;
+            }
+            .chip{
+                height: 3.5em;
+            }
+            .wifi{}
+        }
+        &__body {
+            position: relative;
+            color: $text_one;
+            span {
+                display: block;
+            }
+            .holder {
+                text-transform: capitalize;
+                font-weight: 600;
+                font-size: 1em;
+                margin-bottom: .5em;
+            }
+            .card-digits {
+                display: flex;
+                margin-bottom: .5em;
+                .hidden-digits {
+                    @include setFlex(flex, center, initial, initial);
+                    margin-right: .5em;
+                    .circle {
+                        height: .5em;
+                        width: .5em;
+                        border-radius: 50%;
+                        background-color: $dark_bg;
+                        margin-right: .4em;
+                    }
+                }
+                .visible-digits {
+                    font-family: $opensans;
+                    font-weight: 700;
+                    font-size: 1.15em;
+                }
+            }
+        }
+        &__footer {
+            @include setFlex(flex, center, space-between, initial);
+            position: relative;
+            top: 2em;
+            .expiry {
+                font-family: $opensans;
+                font-weight: 700;
+                font-size: 1em;
+            }
+            .logo {
+                height: 2.5em;
+            }
+        }
+        &::before {
+            // content: '';
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // right: 0;
+            // bottom: 0;
+            // background-color: rgb(255 255 255 / 70%);
+            // box-shadow: 0px 4px 14px 6px rgba(224, 224, 224, 0.479);
+            // filter: blur(10px);
+        }
+    }
+    .blu {
+        content: '';
+        display: block;
+        height: 2em;
+        width: 4em;
+        background-color: $blue_bg;
+        position: absolute;
+        top: -10px;
+        z-index: -99;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .checkout-details {
+        background-color: #f6f6f6;
+        height: 80%;
+        width: 100%;
+        border-radius: 1em;
+        position: absolute;
+        bottom: 0;
+    }
 }
