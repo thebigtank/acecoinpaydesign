@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800;900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/averta-blackitalic?styles=17711,17713,17717,17720,17722,17723');
+
 @import 'variables.scss';
 @import 'mixins.scss';
 
@@ -7,16 +8,29 @@ html {
     font-size: 16px;
 }
 
-.wrapper {
-    padding-top: 6em;
-    font-family: $raleway;
+body {
+    background: url('../assets/bg.jpg');
+    // background-size: cover;
+    background-repeat: no-repeat;
 }
 
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 6em;
+    font-family: $averta-regular;
+    background: #ffffff;
+    padding: 3em;
+    padding-top: 5.5em;
+    margin-top: 8em;
+}
+
+
 .form {
-    padding-right: 5em;
+    padding-right: 3em;
     &-header {
         @include setFlex(flex, center, space-between, initial);
-        margin-bottom: 6em;
+        margin-bottom: 5em;
         .logo {
             @include setFlex(flex, center, space-between, initial);
             &-circle {
@@ -27,26 +41,26 @@ html {
                 border-radius: 50%;
             }
             h1 {
-                font-weight: 800;
+                font-family: $averta-bold;
+                font-weight: 700;
                 font-size: 1.75em;
                 margin-left: .6em;
                 color: $text_one;
                 .lean {
-                    font-weight: 500;
+                    font-family: $averta-thin;
                 }
             }
         }
 
         .timer {
-            font-family: $opensans;
             font-weight: 600;
             font-size: 1.35em;
             &-box {
                 background-color: $dark_bg;
                 color: #fff;
-                padding: .3em .4em;
+                padding: .4em;
                 border-radius: 4px;
-                margin-left: -3px;
+                margin-left: -2px;
             }
             &-divider {
                 position: relative;
@@ -60,28 +74,28 @@ html {
                 margin-bottom: 2em;
                 .header {
                     @include setFlex(flex, center, space-between, initial);
+                    margin-bottom: 1.8em;
                     .description {
                         .title {
                             text-transform: capitalize;
-                            font-weight: 800;
+                            font-family: $averta-bold;
                             font-size: 1.15em;
                             color: $text_one;
-                            margin-bottom: .2em;
+                            margin-bottom: .4em;
                         }
                         .desc {
-                            font-family: $opensans;
+                            font-family: $averta-semibold;
                             font-size: .9em;
-                            font-weight: 600;
                             color: $text_two;
 
                         }
                     }
                     button.edit {
                         @include setFlex(flex, center, space-between, initial);
-                        color: $active-border;
+                        color: #1da1f2;
                         svg {
                             height: 1em;
-                            fill: $active-border;
+                            fill: #1da1f2;
                         }
                         .btn-desc {
                             display: block;
@@ -112,16 +126,18 @@ html {
                     }
                     input {
                         border: 2px solid $input-border;
-                        font-family: $opensans;
                         width: 100%;
                         padding: 1em 4em 1em 4em;
                         font-size: 1.2em;
                         border-radius: 6px;
-                        background: linear-gradient(45deg, #F5F5F5, transparent);
-                        font-weight: 700;
+                        background: linear-gradient(45deg, #f5f8ff, transparent);
+                        font-family: $averta-semibold;
                         color: $text_one;
                         &:focus {
                             outline-color: $active-border;
+                        }
+                        &::placeholder {
+                            opacity: .5;
                         }
                     }
                 }
@@ -129,18 +145,22 @@ html {
                 &.__col {
                     @include setFlex(flex, center, space-between, initial);
                     .grp {
-                        @include setFlex(flex, center, flex-end, initial);
+                        @include setFlex(flex, center, space-between, initial);
+                        width: 400px;
+                        position: relative;
                         .divider {
                             display: block;
-                            margin: 0 .65em;
                             font-size: 1.5em;
                             font-weight: 700;
                             color: $text_one;
+                            position: absolute;
+                            left: 50%;
+                            transform: translate(-50%, 0);
                         }
                     }
                     .main {
                         margin-top: 0;
-                        width: 50%;
+                        width: 400px;
                         input {
                             padding-right: 0;
                             padding-left: 0;
@@ -159,7 +179,7 @@ html {
                             opacity: .35;
                         }
                         &.__date {
-                            width: 32%;
+                            width: 42%;
                         }
                     }
                 }
@@ -167,20 +187,17 @@ html {
             .btn-submit {
                 background-color: $blue_bg;
                 width: 100%;
-                padding: 1em 0;
+                padding: 1.2em 0;
                 margin-top: .75em;
                 box-sizing: border-box;
                 color: #fff;
                 text-transform: capitalize;
-                font-size: 1.3em;
-                font-weight: 700;
-                border-radius: 8px;
+                font-size: 1.2em;
+                font-weight: 600;
+                border-radius: .6em;
                 transition: all 250ms ease-in-out;
                 &:hover {
-                    background-color: rgb(33 150 243 / 80%);
-                }
-                &:active {
-                    // background-color: rgb(33 150 243 / 20%);
+                    background-color: #1254d6;
                 }
             }
         }
@@ -188,17 +205,19 @@ html {
 }
 
 .checkout {
-    // background-color: yellow;
     position: relative;
     height: 100%;
+    width: 90%;
+    float: right;
+    // overflow: hidden;
     .credit-card {
-        width: 17.5em;
-        height: 24em;
-        background-color: rgb(255 255 255 / 90%);
+        width: 17em;
+        height: 23.4em;
+        background: linear-gradient(180deg, rgb(255 255 255 / 60%), #fff);
         margin: 0 auto;
         padding: 2em;
         border-radius: 1em;
-        box-shadow: 0px 4px 14px 6px rgba(224, 224, 224, 0.4);
+        box-shadow: 0px 4px 14px 2px rgba(224, 224, 224, 0.6);
         position: absolute;
         z-index: 99;
         left: 50%;
@@ -223,9 +242,10 @@ html {
             }
             .holder {
                 text-transform: capitalize;
-                font-weight: 600;
-                font-size: 1em;
+                font-family: $averta-semibold;
+                font-size: 1.05em;
                 margin-bottom: .5em;
+                color: #616161;
             }
             .card-digits {
                 display: flex;
@@ -234,63 +254,155 @@ html {
                     @include setFlex(flex, center, initial, initial);
                     margin-right: .5em;
                     .circle {
-                        height: .5em;
-                        width: .5em;
+                        height: .45em;
+                        width: .45em;
                         border-radius: 50%;
                         background-color: $dark_bg;
                         margin-right: .4em;
                     }
                 }
                 .visible-digits {
-                    font-family: $opensans;
-                    font-weight: 700;
-                    font-size: 1.15em;
+                    font-family: $averta-bold;
+                    font-size: 1.3em;
                 }
             }
         }
         &__footer {
             @include setFlex(flex, center, space-between, initial);
             position: relative;
-            top: 2em;
+            top: 1.4em;
             .expiry {
-                font-family: $opensans;
-                font-weight: 700;
-                font-size: 1em;
+                font-family: $averta-bold;
+                font-size: 1.1em;
             }
             .logo {
                 height: 2.5em;
             }
         }
         &::before {
-            // content: '';
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // right: 0;
-            // bottom: 0;
-            // background-color: rgb(255 255 255 / 70%);
-            // box-shadow: 0px 4px 14px 6px rgba(224, 224, 224, 0.479);
-            // filter: blur(10px);
+            content: '';
+            position: absolute;
+            display: block;
+            height: .4em;
+            width: 4em;
+            background-color: #1da1f2;
+            top: -6px;
+            left: 50%;
+            transform: translate(-50%, 0);
         }
     }
     .blu {
-        content: '';
         display: block;
-        height: 2em;
+        height: 1em;
         width: 4em;
         background-color: $blue_bg;
         position: absolute;
-        top: -10px;
+        top: 4px;
         z-index: -99;
         left: 50%;
         transform: translate(-50%, 0);
+        filter: blur(12px);
     }
     .checkout-details {
-        background-color: #f6f6f6;
-        height: 80%;
+        background-color: #f0f3f8;
+        height: 82%;
         width: 100%;
         border-radius: 1em;
         position: absolute;
         bottom: 0;
+        .purchase-data {
+            position: relative;
+            top: 15.5em;
+            padding: 2em;
+            .data {
+                @include setFlex(flex, center, space-between, initial);
+                text-transform: capitalize;
+                font-size: 1em;
+                color: $text_two;
+                margin-bottom: 1.2em;
+                .title {
+                    font-family: $averta-regular;
+                }
+                .value {
+                    @include setFlex(flex, center, space-between, initial);
+                    img {
+                        height: 1.5em;
+                    }
+                    .inner-text {
+                        color: $text_one;
+                        font-family: $averta-bold;
+                        margin-left: .6em;
+                    }
+                }
+            }
+        }
+        .divider {
+            position: absolute;
+            bottom: 7.4em;
+            width: 100%;
+            border: 4px dashed #cbcbcb;
+            display: flex;
+            align-items: center;
+            .left, .right {
+                position: absolute;
+                height: 2.65em;
+                width: 2.65em;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+            .left {
+                bottom: -15px;
+                left: -25px;
+            }
+            .right {
+                bottom: -15px;
+                right: -25px;
+            }
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 2em;
+                background-color: #f0f3f8;
+                bottom: -30px;
+            }
+        }
+        .purchase-total {
+            position: absolute;
+            bottom: 1.4em;
+            width: 100%;
+            padding: 0 2em;
+            @include setFlex(flex, center, space-between, initial);
+            .total {
+                .desc {
+                    font-family: $averta-regular;
+                    color: #8e96a3;
+                }
+                .t-amount {
+                    @include setFlex(flex, center, initial, initial);
+                    .amount {
+                        font-family: $averta-extrabold;
+                        font-size: 2em;
+                        sub {
+                            font-family: $averta-regular;
+                            font-size: .7em;
+                            position: relative;
+                            bottom: 1px;
+                        }
+                    }
+                    .symbol {
+                        position: relative;
+                        top: 6px;
+                        font-size: 1.3em;
+                        margin-left: .2em;
+                        color: #8e96a3;
+                    }
+                }
+            }
+            img {
+                height: 1.8em;
+            }
+        }
     }
 }

@@ -1,22 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800;900&display=swap");
+@import url("http://fonts.cdnfonts.com/css/averta-blackitalic?styles=17711,17713,17717,17720,17722,17723");
 html {
   font-size: 16px;
 }
 
+body {
+  background: url("../assets/bg.jpg");
+  background-repeat: no-repeat;
+}
+
 .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
   padding-top: 6em;
-  font-family: "Raleway", sans-serif;
+  font-family: "Averta-Regular", sans-serif;
+  background: #ffffff;
+  padding: 3em;
+  padding-top: 5.5em;
+  margin-top: 8em;
 }
 
 .form {
-  padding-right: 5em;
+  padding-right: 3em;
 }
 .form-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: initial;
-  margin-bottom: 6em;
+  margin-bottom: 5em;
 }
 .form-header .logo {
   display: flex;
@@ -28,29 +39,29 @@ html {
   height: 3em;
   width: 3em;
   display: block;
-  background-color: #2196F3;
+  background-color: #035fff;
   border-radius: 50%;
 }
 .form-header .logo h1 {
-  font-weight: 800;
+  font-family: "Averta-Bold", sans-serif;
+  font-weight: 700;
   font-size: 1.75em;
   margin-left: 0.6em;
   color: #05365c;
 }
 .form-header .logo h1 .lean {
-  font-weight: 500;
+  font-family: "Averta-Thin", sans-serif;
 }
 .form-header .timer {
-  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 1.35em;
 }
 .form-header .timer-box {
-  background-color: #05365c;
+  background-color: #17254c;
   color: #fff;
-  padding: 0.3em 0.4em;
+  padding: 0.4em;
   border-radius: 4px;
-  margin-left: -3px;
+  margin-left: -2px;
 }
 .form-header .timer-divider {
   position: relative;
@@ -64,30 +75,30 @@ html {
   align-items: center;
   justify-content: space-between;
   flex-direction: initial;
+  margin-bottom: 1.8em;
 }
 .form-body form .input-group .header .description .title {
   text-transform: capitalize;
-  font-weight: 800;
+  font-family: "Averta-Bold", sans-serif;
   font-size: 1.15em;
   color: #05365c;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.4em;
 }
 .form-body form .input-group .header .description .desc {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Averta-Semibold", sans-serif;
   font-size: 0.9em;
-  font-weight: 600;
-  color: #817f82;
+  color: #8e96a3;
 }
 .form-body form .input-group .header button.edit {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: initial;
-  color: #0077B6;
+  color: #1da1f2;
 }
 .form-body form .input-group .header button.edit svg {
   height: 1em;
-  fill: #0077B6;
+  fill: #1da1f2;
 }
 .form-body form .input-group .header button.edit .btn-desc {
   display: block;
@@ -117,17 +128,19 @@ html {
 }
 .form-body form .input-group .main input {
   border: 2px solid rgba(224, 224, 224, 0.5);
-  font-family: "Open Sans", sans-serif;
   width: 100%;
   padding: 1em 4em 1em 4em;
   font-size: 1.2em;
   border-radius: 6px;
-  background: linear-gradient(45deg, #F5F5F5, transparent);
-  font-weight: 700;
+  background: linear-gradient(45deg, #f5f8ff, transparent);
+  font-family: "Averta-Semibold", sans-serif;
   color: #05365c;
 }
 .form-body form .input-group .main input:focus {
   outline-color: #0077B6;
+}
+.form-body form .input-group .main input::placeholder {
+  opacity: 0.5;
 }
 .form-body form .input-group.__col {
   display: flex;
@@ -138,19 +151,23 @@ html {
 .form-body form .input-group.__col .grp {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-direction: initial;
+  width: 400px;
+  position: relative;
 }
 .form-body form .input-group.__col .grp .divider {
   display: block;
-  margin: 0 0.65em;
   font-size: 1.5em;
   font-weight: 700;
   color: #05365c;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .form-body form .input-group.__col .main {
   margin-top: 0;
-  width: 50%;
+  width: 400px;
 }
 .form-body form .input-group.__col .main input {
   padding-right: 0;
@@ -170,36 +187,39 @@ html {
   opacity: 0.35;
 }
 .form-body form .input-group.__col .main.__date {
-  width: 32%;
+  width: 42%;
 }
 .form-body form .btn-submit {
-  background-color: #2196F3;
+  background-color: #035fff;
   width: 100%;
-  padding: 1em 0;
+  padding: 1.2em 0;
   margin-top: 0.75em;
   box-sizing: border-box;
   color: #fff;
   text-transform: capitalize;
-  font-size: 1.3em;
-  font-weight: 700;
-  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 0.6em;
   transition: all 250ms ease-in-out;
 }
 .form-body form .btn-submit:hover {
-  background-color: rgba(33, 150, 243, 0.8);
+  background-color: #1254d6;
 }
+
 .checkout {
   position: relative;
   height: 100%;
+  width: 90%;
+  float: right;
 }
 .checkout .credit-card {
-  width: 17.5em;
-  height: 24em;
-  background-color: rgba(255, 255, 255, 0.9);
+  width: 17em;
+  height: 23.4em;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), #fff);
   margin: 0 auto;
   padding: 2em;
   border-radius: 1em;
-  box-shadow: 0px 4px 14px 6px rgba(224, 224, 224, 0.4);
+  box-shadow: 0px 4px 14px 2px rgba(224, 224, 224, 0.6);
   position: absolute;
   z-index: 99;
   left: 50%;
@@ -228,9 +248,10 @@ html {
 }
 .checkout .credit-card__body .holder {
   text-transform: capitalize;
-  font-weight: 600;
-  font-size: 1em;
+  font-family: "Averta-Semibold", sans-serif;
+  font-size: 1.05em;
   margin-bottom: 0.5em;
+  color: #616161;
 }
 .checkout .credit-card__body .card-digits {
   display: flex;
@@ -244,16 +265,15 @@ html {
   margin-right: 0.5em;
 }
 .checkout .credit-card__body .card-digits .hidden-digits .circle {
-  height: 0.5em;
-  width: 0.5em;
+  height: 0.45em;
+  width: 0.45em;
   border-radius: 50%;
-  background-color: #05365c;
+  background-color: #17254c;
   margin-right: 0.4em;
 }
 .checkout .credit-card__body .card-digits .visible-digits {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-size: 1.15em;
+  font-family: "Averta-Bold", sans-serif;
+  font-size: 1.3em;
 }
 .checkout .credit-card__footer {
   display: flex;
@@ -261,35 +281,149 @@ html {
   justify-content: space-between;
   flex-direction: initial;
   position: relative;
-  top: 2em;
+  top: 1.4em;
 }
 .checkout .credit-card__footer .expiry {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-size: 1em;
+  font-family: "Averta-Bold", sans-serif;
+  font-size: 1.1em;
 }
 .checkout .credit-card__footer .logo {
   height: 2.5em;
 }
-.checkout .blu {
+.checkout .credit-card::before {
   content: "";
-  display: block;
-  height: 2em;
-  width: 4em;
-  background-color: #2196F3;
   position: absolute;
-  top: -10px;
-  z-index: -99;
+  display: block;
+  height: 0.4em;
+  width: 4em;
+  background-color: #1da1f2;
+  top: -6px;
   left: 50%;
   transform: translate(-50%, 0);
 }
+.checkout .blu {
+  display: block;
+  height: 1em;
+  width: 4em;
+  background-color: #035fff;
+  position: absolute;
+  top: 4px;
+  z-index: -99;
+  left: 50%;
+  transform: translate(-50%, 0);
+  filter: blur(12px);
+}
 .checkout .checkout-details {
-  background-color: #f6f6f6;
-  height: 80%;
+  background-color: #f0f3f8;
+  height: 82%;
   width: 100%;
   border-radius: 1em;
   position: absolute;
   bottom: 0;
+}
+.checkout .checkout-details .purchase-data {
+  position: relative;
+  top: 15.5em;
+  padding: 2em;
+}
+.checkout .checkout-details .purchase-data .data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  text-transform: capitalize;
+  font-size: 1em;
+  color: #8e96a3;
+  margin-bottom: 1.2em;
+}
+.checkout .checkout-details .purchase-data .data .title {
+  font-family: "Averta-Regular", sans-serif;
+}
+.checkout .checkout-details .purchase-data .data .value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.checkout .checkout-details .purchase-data .data .value img {
+  height: 1.5em;
+}
+.checkout .checkout-details .purchase-data .data .value .inner-text {
+  color: #05365c;
+  font-family: "Averta-Bold", sans-serif;
+  margin-left: 0.6em;
+}
+.checkout .checkout-details .divider {
+  position: absolute;
+  bottom: 7.4em;
+  width: 100%;
+  border: 4px dashed #cbcbcb;
+  display: flex;
+  align-items: center;
+}
+.checkout .checkout-details .divider .left, .checkout .checkout-details .divider .right {
+  position: absolute;
+  height: 2.65em;
+  width: 2.65em;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.checkout .checkout-details .divider .left {
+  bottom: -15px;
+  left: -25px;
+}
+.checkout .checkout-details .divider .right {
+  bottom: -15px;
+  right: -25px;
+}
+.checkout .checkout-details .divider::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2em;
+  background-color: #f0f3f8;
+  bottom: -30px;
+}
+.checkout .checkout-details .purchase-total {
+  position: absolute;
+  bottom: 1.4em;
+  width: 100%;
+  padding: 0 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.checkout .checkout-details .purchase-total .total .desc {
+  font-family: "Averta-Regular", sans-serif;
+  color: #8e96a3;
+}
+.checkout .checkout-details .purchase-total .total .t-amount {
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  flex-direction: initial;
+}
+.checkout .checkout-details .purchase-total .total .t-amount .amount {
+  font-family: "Averta-ExtraBold", sans-serif;
+  font-size: 2em;
+}
+.checkout .checkout-details .purchase-total .total .t-amount .amount sub {
+  font-family: "Averta-Regular", sans-serif;
+  font-size: 0.7em;
+  position: relative;
+  bottom: 1px;
+}
+.checkout .checkout-details .purchase-total .total .t-amount .symbol {
+  position: relative;
+  top: 6px;
+  font-size: 1.3em;
+  margin-left: 0.2em;
+  color: #8e96a3;
+}
+.checkout .checkout-details .purchase-total img {
+  height: 1.8em;
 }
 
 /*# sourceMappingURL=main.css.map */
