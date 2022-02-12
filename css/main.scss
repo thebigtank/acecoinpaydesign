@@ -10,11 +10,12 @@ html {
 
 body {
     background: url('../assets/bg.jpg');
-    // background-size: cover;
     background-repeat: no-repeat;
+    background-position: left;
 }
 
 .wrapper {
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 6em;
@@ -22,7 +23,17 @@ body {
     background: #ffffff;
     padding: 3em;
     padding-top: 5.5em;
-    margin-top: 8em;
+    margin-top: 6em;
+
+    .close-btn {
+        position: absolute;
+        z-index: 99;
+        top: 16px;
+        right: 16px;
+        svg {
+            height: 1.5em;
+        }
+    }
 }
 
 
@@ -297,8 +308,7 @@ body {
         width: 4em;
         background-color: $blue_bg;
         position: absolute;
-        top: 4px;
-        z-index: -99;
+        top: 6px;
         left: 50%;
         transform: translate(-50%, 0);
         filter: blur(12px);
